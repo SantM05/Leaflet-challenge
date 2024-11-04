@@ -7,7 +7,17 @@ leaflet-challenge
 #### Code corrections
 ##### Javascript 
 ##### Corrections made with the Xpert learning assistant in the following lines of code:
-##### // const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(myMap);
+##### 1. const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+##### attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+##### }).addTo(myMap);
+##### 2. for (let i = 0; i < limits.length; i++) {
+#####            let from = limits[i];
+#####            let to = limits[i + 1] ? limits[i + 1] : "+";
+#####            labels.push(
+##### `<li><span style="background-color: ${colors[i]}"></span> ${from} - ${to} km</li>`
+##### );
+##### }
+#####  // Join the labels into a list and add them to the div
+##### div.innerHTML += "<ul>" + labels.join("") + "</ul>"; 
+##### erros in syntaxis found in the loop
 
